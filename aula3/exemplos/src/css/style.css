@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#topo_loja {
+    background-color: #7d0707;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#bt_menu, #label_menu {
+    display: none;
+}
+
+#menu ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.titulo_secao{
+    text-align: center;
+    margin-top: 40px;
+    color: #630000;
+}
+
+
+
+.vitrine_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color:  #ffc2c2;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.preco {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bt_pedido {
+    background-color: #c60000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+
+#rodape {
+    background-color: #7d0707;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media screen{
+    #topo_loja h1 {
+        letter-spacing: 2px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* TELAS ENTRE 601PX E 1024PX - TABLET*/
+
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .vitrine_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* TELAS ATÉ 600PX - CELULAR*/
+
+@media screen and (max-width: 600px), (orientation: portrait){
+    #label_menu {
+        display: block;
+        font-size: 2.5rem;
+        color: rgb(238, 192, 136);
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}
+
+/*CONTINUA*/
