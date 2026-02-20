@@ -114,10 +114,37 @@
     #label_menu {
         display: block;
         font-size: 2.5rem;
-        color: rgb(238, 192, 136);
+        color: #eec088;
         cursor: pointer;
         margin-top: 10px;
     }
+    .vitrine_grid {
+    grid-template-columns: 1fr;
+}
 }
 
-/*CONTINUA*/
+#menu ul{
+    display: none;
+}
+
+#bt_menu:checked ~ #menu ul{
+    display: block;
+    padding: 10px 0;
+}
+
+.desc{
+    display: none;
+}
+
+#menu li {
+    display: block;
+    margin: 15px, 0;
+    border-bottom: 1px solid #eec088;
+    padding-bottom: 10px;
+}
+
+@media not screen {
+    #menu, .bt_pedido, #label_menu, #bt_menu {
+        display: none;
+    }
+}
