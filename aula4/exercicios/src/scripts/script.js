@@ -65,4 +65,5 @@ const idade = atual - ano
 
 alert("Modelo: " + modelo + " | Idade: " + idade)
 
-/* Não testado! */
+/* Não testado e não finalizado!
+Última atualização: 22:56*/
