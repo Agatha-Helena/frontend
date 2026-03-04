@@ -32,7 +32,7 @@ if (compra > 150 && cupom.toLowerCase() === "sim"){
 
 /* ------------------------------------------------------------------ */
 
-const num = prompt("Escolha um número aleatório de 1 a 10: ")
+/* const num = prompt("Escolha um número aleatório de 1 a 10: ")
 
 numale = (Math.random() * 10)
 
@@ -42,4 +42,28 @@ if (num === numsort){
     alert("Parabéns, você ganhou um brinde!")
 } else {
     alert("Que pena, o número sorteado foi " + numsort)
+} */
+
+/* ------------------------------------------------------------------ */
+
+class Veiculo{
+    constructor(modelo, marca, ano){
+        this.modelo = modelo,
+        this.marca = marca,
+        this.ano = ano
+    }
+    idadeVeiculo(calculo){
+        return "Seu veículo tem " + calculo + " anos."
+    }
 }
+
+const ano = prompt("Digite o ano do seu veículo: ")
+
+let atual = new Date()
+
+const idade = atual - ano
+
+alert("Modelo: " + modelo + " | Idade: " + idade)
+
+/* Não testado e não finalizado!
+Última atualização: 22:56*/
