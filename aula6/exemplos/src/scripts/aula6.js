@@ -14,6 +14,7 @@ if (saudacao) {
 }
 
 // 2. CÁLCULO DE PREÇO DINÂMICO (Aula 6)
+const btn = document.querySelector('.btn-pedido')
 const inputQtd = document.querySelector("#qtd-lasanha");
 const precoTexto = document.querySelector("#preco-lasanha");
 
@@ -28,37 +29,20 @@ if (inputQtd && precoTexto) {
     });
 }
 
-// 3. EVENTO DE CLIQUE PARA TODOS OS BOTÕES (Mobile e Desktop)
-// Usamos querySelectorAll para garantir que todos os botões da página funcionem.
-const botoesPedido = document.querySelectorAll(".btn-pedido");
+//2. Adicionamos o 'ouvinte' (Evento, Função)
 
-botoesPedido.forEach((botao) => {
-    // Usamos 'click' que é universal para mouse e touch
-    botao.addEventListener("click", (event) => {
-        // Evita qualquer comportamento padrão do navegador
-        event.preventDefault();
+btn.addEventListener('click', function() {
+    //LINHA A LINHA: Quando o clique ocorrer, este bloco será executado
+    console.log("O vigia detectou um clique no botão!")
+    btn.textContent = "Procesando..."
+})
 
-        const nomePrato = botao.parentElement.querySelector("h3").textContent;
-        alert(
-            `🥘 Sucesso! Seu pedido de "${nomePrato}" foi enviado para a cozinha.`,
-        );
+//3. Adicionando ouvinte compartilhado (classe) EVENT.TARGET
 
-        // Efeito visual no botão após clique
-        botao.textContent = "✓ Pedido Enviado";
-        botao.style.backgroundColor = "#27ae60"; // Verde Sucesso
-        botao.disabled = true;
-    });
-});
-
-// 4. INTERATIVIDADE NOS CARDS (Feedback visual)
-const cards = document.querySelectorAll(".card");
-cards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-5px)";
-        card.style.boxShadow = "0 10px 20px rgba(0,0,0,0.1)";
-    });
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0)";
-        card.style.boxShadow = "none";
-    });
-});
+const massas = document.querySelector("#secao-massas")
+massas.addEventListener('click', (event) => {
+    const clicado = event.target
+    if (clicado.classList.contains('btn-pedido')) {
+        console.log("Você clicou em um botão de pedido de massa")
+    }
+})
