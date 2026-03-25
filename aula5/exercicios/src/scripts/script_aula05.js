@@ -7,7 +7,7 @@ imgAluno.setAttribute('src', 'https://i.pinimg.com/474x/e7/81/dd/e781dd9c8be51d8
 const corPerfil = document.querySelector("#container-perfil")
 const corFonte = document.querySelector("#container-perfil")
 const corBio = document.querySelector(".biografia")
-corPerfil.style.background = '#586382'
+corPerfil.style.backgroundColor = '#586382'
 corFonte.style.color = '#ffffff'
 corBio.style.color = '#ffffff'
 
